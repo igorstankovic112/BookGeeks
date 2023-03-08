@@ -22,7 +22,7 @@ function getFromLocalStorage(name){
 };
 function ajaxCallback(file, result){
     $.ajax({
-        url: "assets/json/" + file + ".json",
+        url: "assets/data/" + file + ".json",
         method: "GET",
         dataType:"json",
         success: result,

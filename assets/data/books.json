@@ -4,7 +4,7 @@
     "category":"Fantasy",
     "author":"J.R.R. Tolkien",
     "img":{
-        "src":"../assets/images/fellowship.jpg",
+        "src":"assets/images/fellowship.jpg",
         "alt":"fellowshipOfTheRing"
     },
     "price":{
@@ -28,7 +28,7 @@
     "category":"Fantasy",
     "author":"J.R.R. Tolkien",
     "img":{
-        "src":"../assets/images/twotowers.jpg",
+        "src":"assets/images/fellowship.jpg",
         "alt":"twoTowers"
     },
     "price":{
@@ -53,7 +53,7 @@
     "category":"Fantasy",
     "author":"J.R.R. Tolkien",
     "img":{
-        "src":"../assets/images/returnoftheking.jpg",
+        "src":"assets/images/returnoftheking.jpg",
         "alt":"returnOfTheKing"
     },
     "price":{
@@ -78,7 +78,7 @@
     "category":"Fantasy",
     "author":"John Gwynne",
     "img":{
-        "src":"../assets/images/shadowGods.jpg",
+        "src":"assets/images/shadowGods.jpg",
         "alt":"shadowGods"
     },
     "price":{
@@ -102,7 +102,7 @@
     "category":"Fantasy",
     "author":"John Gwynne",
     "img":{
-        "src":"../assets/images/hungerGods.jpg",
+        "src":"assets/images/hungerGods.jpg",
         "alt":"hungerGods"
     },
     "price":{
@@ -126,7 +126,7 @@
     "category":"Sci-Fi",
     "author":"Frank Herbert",
     "img":{
-        "src":"../assets/images/dune.jpg",
+        "src":"assets/images/dune.jpg",
         "alt":"dune"
     },
     "price":{
@@ -150,7 +150,7 @@
     "category":"Sci-Fi",
     "author":"Isac Asimov",
     "img":{
-        "src":"../assets/images/foundation.jpg",
+        "src":"assets/images/foundation.jpg",
         "alt":"foundation"
     },
     "price":{
@@ -174,7 +174,7 @@
     "category":"Fantasy",
     "author":"Brandon Sanderson",
     "img":{
-        "src":"../assets/images/wayofkings.jpg",
+        "src":"assets/images/wayofkings.jpg",
         "alt":"wayofkings"
     },
     "price":{
@@ -198,7 +198,7 @@
     "category":"Sci-Fi",
     "author":"Martha Wells",
     "img":{
-        "src":"../assets/images/systemsRed.jpg",
+        "src":"assets/images/systemsRed.jpg",
         "alt":"systemsRed"
     },
     "price":{
@@ -222,7 +222,7 @@
     "category":"Sci-Fi",
     "author":"Ursula K. Le Guin",
     "img":{
-        "src":"../assets/images/handDarkness.jpg",
+        "src":"assets/images/handDarkness.jpg",
         "alt":"leftHandOfDarkness"
     },
     "price":{
@@ -247,7 +247,7 @@
     "category":"Fantasy",
     "author":"Rachel Gillig",
     "img":{
-        "src":"../assets/images/darkWindow.jpg",
+        "src":"assets/images/darkWindow.jpg",
         "alt":"darkWindow"
     },
     "price":{
@@ -272,7 +272,7 @@
     "category":"Fantasy",
     "author":"George R.R. Martin",
     "img":{
-        "src":"../assets/images/gameOfThrones.jpg",
+        "src":"assets/images/gameOfThrones.jpg",
         "alt":"gameOfThrones"
     },
     "price":{
@@ -297,7 +297,7 @@
     "category":"Fantasy",
     "author":"George R.R. Martin",
     "img":{
-        "src":"../assets/images/clashOfKings.jpg",
+        "src":"assets/images/clashOfKings.jpg",
         "alt":"clashOfKings"
     },
     "price":{
@@ -322,7 +322,7 @@
     "category":"Fantasy",
     "author":"George R.R. Martin",
     "img":{
-        "src":"../assets/images/stormOfSwords.jpg",
+        "src":"assets/images/stormOfSwords.jpg",
         "alt":"stormOfSwords"
     },
     "price":{
