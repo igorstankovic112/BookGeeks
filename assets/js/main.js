@@ -36,7 +36,6 @@ var page = document.getElementById("row");
 function print(data){
     let brojac = 1;
     let cb1 = document.getElementById("featured");
-    cb1.addEventListener("click",featuredBooks(data));
     let html = `<div class="card-deck">`;
     console.log(data);
     data = allBooks(data);
