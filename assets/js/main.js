@@ -74,7 +74,7 @@ function print(data){
 function latestBooks(books){
     let latest = [];
     latest = books.filter(book => book.latest == 1);
-    if(url=="/index.html"){
+    if(url=="/index.html" || url=="/BookGeeks/index.html" || url=="/BookGeeks/"){
         return latest;
     }
     else return books;
@@ -83,7 +83,7 @@ function latestBooks(books){
 function allBooks(books){
     let latest = [];
     latest = books;
-    if(url=="/books.html"){
+    if(url=="/books.html" || url=="/BookGeeks/books.html"){
         return latest;
     }
     else return books;
