@@ -1,0 +1,14 @@
+[
+    {
+        "id":1,
+        "category":"hot"
+    },
+    {
+        "id":2,
+        "category":"hot"
+    },
+    {
+        "id":3,
+        "category":"featured"
+    }
+]

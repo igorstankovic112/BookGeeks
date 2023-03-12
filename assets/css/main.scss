@@ -51,6 +51,150 @@
     height: 100%;
     
 }
-.loader{
-    border: 0 solid transparent;
+.ddl{
+    width: 180px;
+    margin-left: 10px;
+}
+#label{
+    margin-left: 15px;
+}
+
+
+
+.greskaForm{
+    color:red;
+    font-size: 14px;
+    float:left;
+    font-weight: 600;
+    margin-left: 12px;
+}
+
+.hide{
+    visibility: hidden;
+    padding-left: 30px;
+   
+}
+.greskaRadio{
+    color: red;
+    font-size: 18px;
+    font-weight: 600;
+}
+.sentFormText{
+    color: blue;
+    font-size: 20px;
+}
+.greskaTb{
+    color: red;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.content-section {
+    padding-top: 80px;
+    display: inline-block;
+    height: auto;
+    text-align: center;
+  }
+
+#contact {
+    padding-top: 0px;
+    text-align: center;
+    
+  }
+  
+  #contact-content {
+    padding: 80px 60px;
+  }
+  
+  #contact input {
+    border-radius: 0px;
+    padding-left: 15px;
+    font-size: 13px;
+    color: #aaa;
+    background-color: #f4f4f4;
+    border: 1px solid #eee;
+    outline: none;
+    box-shadow: none;
+    line-height: 40px;
+    height: 40px;
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  
+  #contact textarea {
+    border-radius: 0px;
+    padding-left: 15px;
+    padding-top: 10px;
+    font-size: 13px;
+    color: #aaa;
+    background-color: #f4f4f4;
+    border: 1px solid #eee;
+    outline: none;
+    box-shadow: none;
+    height: 200px;
+    max-height: 250px;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 25px;
+  }
+  
+  #contact button {
+    font-size: 13px;
+    border-radius: 0px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: capitalize;
+    background-color: #f33f3f;
+    display: inline-block;
+    height: 44px;
+    line-height: 24px;
+    outline: none;
+    box-shadow: none;
+    width: 100%;
+    letter-spacing: 0.25px;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  
+  #contact button:hover {
+    color: #232323;
+    background-color: #f4f4f4;
+  }
+
+
+
+
+  .section-heading {
+    text-align: left;
+    position: relative;
+    margin-bottom: 60px;
+  }
+  
+  .section-heading h1 {
+    margin-top: 0px;
+    font-size: 32px;
+    color: #232323;
+    display: inline-block;
+    margin-right: 50px;
+  }
+  
+  .section-heading em {
+    font-style: normal;
+    font-weight: 700;
+    color: #f33f3f;
+  }
+  
+  .section-heading p {
+    display: inline-block;
+    font-size: 15px;
+    line-height: 26px;
+    color: #343434;
+    position: absolute;
+    top: 12.5px;
+  }
+
+#contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
