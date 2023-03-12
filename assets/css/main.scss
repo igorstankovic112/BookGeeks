@@ -34,6 +34,13 @@
     padding-right: 15px!important;
     border: 0px;
     
+    
+}
+.modal-footer{
+    a:hover{
+        background-color: #f33f3f!important;
+    }
+
 }
 .card{
     img:hover{
@@ -80,7 +87,7 @@
     font-weight: 600;
 }
 .sentFormText{
-    color: blue;
+    color: #f33f3f;
     font-size: 20px;
 }
 .greskaTb{
@@ -197,4 +204,45 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.portfolioPic {
+        float: none;
+        width: 80%!important;
+        margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+    .portfolioPic {
+        float: none;
+        width: 90%!important;
+        margin-bottom: 15px;
+      }
+}
+.bookPics{
+    border: 0;
+    background-color: white;
+}
+.card-modal{
+    display: flex;
+    flex-direction: row!important;
+}
+.modalPic{
+    width: 200px!important;
+}
+.modal-bod{
+    width: 50%!important;
+}
+.bold{
+    font-weight: bold;
+}
+.modal-footer{
+    justify-content: center!important;
+}
+#add-to-cart-value{
+    width: 120px!important;
+}
+.p-3{
+    a:hover{
+        background-color: #f33f3f!important;
+    }
 }

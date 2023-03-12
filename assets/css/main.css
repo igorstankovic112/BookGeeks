@@ -41,6 +41,10 @@
   border: 0px;
 }
 
+.modal-footer a:hover {
+  background-color: #f33f3f !important;
+}
+
 .card img:hover {
   -webkit-box-shadow: 0 0 10px #515151;
           box-shadow: 0 0 10px #515151;
@@ -86,7 +90,7 @@
 }
 
 .sentFormText {
-  color: blue;
+  color: #f33f3f;
   font-size: 20px;
 }
 
@@ -211,5 +215,60 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.portfolioPic {
+  float: none;
+  width: 80% !important;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .portfolioPic {
+    float: none;
+    width: 90% !important;
+    margin-bottom: 15px;
+  }
+}
+
+.bookPics {
+  border: 0;
+  background-color: white;
+}
+
+.card-modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-direction: row !important;
+          flex-direction: row !important;
+}
+
+.modalPic {
+  width: 200px !important;
+}
+
+.modal-bod {
+  width: 50% !important;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.modal-footer {
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+}
+
+#add-to-cart-value {
+  width: 120px !important;
+}
+
+.p-3 a:hover {
+  background-color: #f33f3f !important;
 }
 /*# sourceMappingURL=main.css.map */
