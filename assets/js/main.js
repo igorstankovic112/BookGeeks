@@ -66,6 +66,11 @@ function ajaxCallback(file, result){
         }
     });
 }
+
+//pagination
+
+
+
 var numOfBooks = 0;
 var page = document.getElementById("row");
 function print(data){
@@ -82,7 +87,9 @@ function print(data){
     let brojac = 1;
     let html = `<div class="card-deck">`;
     data.forEach(book => {
+        
         numOfBooks++;
+
         html +=`<div class="card" onclick="createModal(${book.id})">
                     <div class="px-0">
                     <button  data-toggle="modal" data-target="#modal" class="bookPics"><img src="${book.img.src}" class="img-fluid picsBut" alt="${book.img.alt}"></button>
@@ -103,101 +110,27 @@ function print(data){
             brojac = 1;
         }
         else brojac++;
+
         
         
-    });
+}
+
+);
     
     
     console.log(numOfBooks);
     html +=`</div>`
     
-    page.innerHTML = html;
-    //picture = document.getElementsByClassName("picsBut");
+    page.innerHTML += html;
     
-    
-   
-    /*for(let i = 0; i < picture.length;i++){
-        picture[i].addEventListener("click",function(){
-            let pcVal = picture[i].src;
-            var srcRow = [];
-            data.forEach(book => {
-                
-                srcRow.push(book.img.src);
-                //console.log(srcRow);
-            });
-
-            if(srcRow[i] == pcVal) console.log("uspelo");
-
-
-            for (let index = 0; index < srcRow.length; index++) {
-                
-                var rowCurrentBooks = [];
-                rowCurrentBooks = data.filter(element => element.img.src == srcRow[index])
-                console.log(rowCurrentBooks);
-                printModal(data,srcRow[index])
-            }
-            
-            //console.log(srcRow);
-            
-            console.log(pcVal)
-            console.log(srcRow[i])
-            let modalNiz = [];
-            modalNiz = data.filter(element => element.img.src == pcVal)
-            console.log(modalNiz);
-            
-            //console.log(data);
-            printModal(data,pcVal)
-        });
-    }*/
 };
-/*var allModals = document.getElementById("modal");
-function printModal(books,src){
-    let html = "";
-    let row = [];
-    row = books.filter(element => element.img.src == src);
-    console.log(books.filter(element => element.img.src == "assets/images/fellowship.jpg"))
-    console.log(row);
-    if(books.filter(element => element.img.src == src)){
-    console.log("1");
-    row.forEach(element =>{
-        html =
-        `<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-                <div class="modal-content" id="modals">
-                <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalCenterTitle">Buy a Book</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="card card-modal">
-                <div class="px-0">
-                <button data-toggle="modal" data-target="#modal" class="bookPics"><img src="${element.img.src}" class="img-fluid " alt="${element.img.alt}"></button>
-                </div>
-                <div class="card-body">
-                    <div class="p-3">
-                        <h4>${element.name}</h4>
-                        <p class="free">First publish in: ${element.year}.</p>
-                        <p class="price h3">${element.price.new}$ <s>${element.price.old}$</s></p>
-                        <p class="free">${element.shipping}</p>
-                        
-                    </div>
-                </div>
-            </div>
-            </div>
-            <div class="modal-footer">
-                <a id="buyButton" class="btn btn-primary">Add to Cart</a>
-                <input type="number" name="add" id="add-to-cart-value" min="1" value="1" class="col-3 m-2">
-            </div>
-                </div>
-        </div>`
-    })
-       
-        
-    allModals.innerHTML = html;
-}
-}
-*/
+
+
+
+
+
+
+
 
 function createModal(id){
     let modalbooks = getFromLocalStorage("books");
@@ -225,8 +158,7 @@ function createModal(id){
                                             <p class="price h3">${book.price.new}$ <s>${book.price.old}$</s></p>
                                             <p><p class="bold">Stock:</p> ${book.stock}</p>
                                             <p class="free">${book.shipping}</p>
-                                            <a id="buyButton" class="btn btn-primary">Add to Cart</a>
-                                            <input type="number" name="add" id="add-to-cart-value" min="1" value="1" class="col-3 m-2">
+                                            
                                         </div>
                                     </div>
                                 </div>

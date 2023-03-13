@@ -217,6 +217,12 @@
         width: 90%!important;
         margin-bottom: 15px;
       }
+    .card-modal{
+        flex-direction: column!important;
+        text-align: center!important;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
 .bookPics{
     border: 0;
