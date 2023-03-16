@@ -33,7 +33,7 @@
   color: #f33f3f;
 }
 
-#buyButton {
+#buyButton, #removeButton {
   background-color: #232323;
   color: white;
   padding-left: 15px !important;
@@ -241,6 +241,9 @@
         -ms-flex-pack: center;
             justify-content: center;
   }
+  .shop {
+    padding-bottom: 0px !important;
+  }
 }
 
 .bookPics {
@@ -282,5 +285,39 @@
 
 .p-3 a:hover {
   background-color: #f33f3f !important;
+}
+
+.hidden {
+  visibility: hidden !important;
+}
+
+#table {
+  text-align: justify;
+}
+
+#checkoutTable {
+  width: 100% !important;
+  text-align: center;
+}
+
+.shop {
+  padding-top: 110px !important;
+}
+
+.shopPic {
+  width: 150px !important;
+  height: auto !important;
+}
+
+#emptyCart {
+  text-align: center !important;
+}
+
+footer {
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin-top: auto;
 }
 /*# sourceMappingURL=main.css.map */

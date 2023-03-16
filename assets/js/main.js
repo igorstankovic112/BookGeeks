@@ -7,7 +7,10 @@ window.onload = function(){
         toLocalStorage("books",result);
     });
     var everyBook = getFromLocalStorage("books");
-    print(everyBook);
+    if(checkBookHtml() || checkIndexHtml())print(everyBook);
+    if(checkShop()){
+        printShop(getFromLocalStorage("cart"));
+    }
 };
 $("#loaderbg").animate({
     'opacity': '0'
@@ -16,7 +19,9 @@ $("#loaderbg").animate({
         $("#loaderbg").css("visibility", "hidden").fadeOut();
     }, 300);
 });
-
+function checkShop(){
+    if(url=="/shop.html" || url=="/BookGeeks/shop.html") return true;
+}
 function checkBookHtml(){
     if(url=="/books.html" || url=="/BookGeeks/books.html") return true;
 };
@@ -121,21 +126,124 @@ function print(data){
     console.log(numOfBooks);
     html +=`</div>`
     
-    page.innerHTML += html;
+    page.innerHTML = html;
     
 };
 
 
 
+//shop cart
+if(!getFromLocalStorage("cart")){
+var cartNow = [];
+cartNow.push({
+    id: 0,
+    name: "Name",
+    img:{
+        src:"assets/images/Blank.jpg"
+    }
+    ,
+    price:{
+        new:"Price in "
+    },
+    quantity: "Quantity"
+  });
+
+toLocalStorage("cart",cartNow);
+}
+console.log(getFromLocalStorage("cart"));
+var emptyCart = document.getElementById("emptyCart")
+function printShop(books){
+    var removeButttons = [];
+    let html = "";
+    let shopBooks = [];
+    shopBooks = books;
+    let brojac = 1;
+    shopBooks.forEach(book =>{
+
+       
+        if(brojac == 1){
+            html += `<thead>
+            <tr>
+              <th scope="col">Book</th>
+              <th scope="col">${book.name}</th>
+              <th scope="col">${book.quantity}</th>
+              <th scope="col">${book.price.new}</th>
+            </tr>
+          </thead>
+          `;
+          emptyCart.innerHTML = "<h2>Your shopping cart is empty!</h2>"
+          brojac++;
+        }
+        else {
+            let empty = document.getElementById("emptyCart")
+            empty.classList.add("hidden")
+        html += 
+            `<tbody id="checkoutTable">
+                <tr class="shopRow">
+                <td class="shop-image">
+                    <a href="#">
+                        <img src="${book.img.src}" class="img-fluid shopPic" alt="article img">
+                    </a>
+                </td>
+                <td class="shop">${book.name}</td>
+                <td class="shop">1
+                </td>
+
+                <td class="shop">${book.price.new}$</td>
+                <td class="shop"><a id="removeButton" data-id="${book.id}" class="btn btn-primary">Remove</a></td>
+                <div >
+                    
+                </div>
+                </td>
+                </tr>
+            </tbody>
+         `
+         
+         removeButttons += document.getElementById("removeButton");}
+    })
+    /*html += `<tbody id="checkoutTable">
+
+    <tr class="shopRow">
+    <td class="shop">
+        
+    </td>
+    <td class="shop"></td>
+    <td class="shop">
+    </td>
+
+    <td class="shop">$</td>
+    <td class="shop"><a id="removeButton" class="btn btn-primary">Remove All</a></td>
+    <div >
+        
+    </div>
+    </td>
+    </tr>
+</tbody>`*/
+
+console.log(removeButttons)
 
 
 
+document.getElementById("table").innerHTML = html;
+}
 
+function removeFromCart(id){
+    let row = getFromLocalStorage("cart");
+    for(let i = 0; i < row.length; i++){
+        if(row[i].id == id){
+            row.splice(i, 1);
+            localStorage.setItem("cart", JSON.stringify(row));
+            printShop(books);
+        }
+    }
+}
 
+//modal
 function createModal(id){
     let modalbooks = getFromLocalStorage("books");
     let html = "";
     console.log(id);
+    var currentBook = [];
     for(book of modalbooks){
         if(book.id == id){
             html = `<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -158,7 +266,9 @@ function createModal(id){
                                             <p class="price h3">${book.price.new}$ <s>${book.price.old}$</s></p>
                                             <p><p class="bold">Stock:</p> ${book.stock}</p>
                                             <p class="free">${book.shipping}</p>
-                                            
+                                            <a id="buyButton" class="btn btn-primary">Add to Cart</a>
+                                            </br>
+                                            <span id="dodato" class="p-3 hidden">Added to the cart!</span>
                                         </div>
                                     </div>
                                 </div>
@@ -166,14 +276,37 @@ function createModal(id){
                             
                         </div>
                     </div>`
-
+        currentBook = book;
+        console.log(currentBook);
         }
     }
     document.getElementById("modal").innerHTML = html;
-    //$("#modal").append(html);
+    var buyButton = document.getElementById("buyButton");
+    var bought = document.getElementById("dodato");
+    buyButton.addEventListener("click",function(){
+        bought.classList.remove("hidden")
+        $(bought).fadeIn(500, function(){
+            setTimeout(()=>{$('#dodato').fadeOut(500)},2000);
+        });
+        cart(currentBook);
+        
+        console.log(JSON.parse(localStorage.getItem("cart")))
+    })
+}
+function cart(books){
+    let booksrow = [];
+    booksrow = books;
+    
+    cartNow = JSON.parse(localStorage.getItem("cart"));
+    //console.log(getFromLocalStorage("cart"));
+    
+    cartNow.push(booksrow);
+    toLocalStorage("cart",cartNow);
+    
+    //console.log(JSON.parse(localStorage.getItem("cart")));
 }
 
-
+//filter for index.html
 function latestBooks(books){
     let latest = [];
     latest = books.filter(book => book.latest == 1);
@@ -183,7 +316,7 @@ function latestBooks(books){
     }
     else return books;
 }
-
+//filter for book.html
 function allBooks(books){
     let latest = [];
     latest = books;
@@ -461,3 +594,4 @@ for (let i = 0; i < portfolio.length; i++) {
     });
 }
 };
+
